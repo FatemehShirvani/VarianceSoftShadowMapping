@@ -1,6 +1,12 @@
 # Variance Soft Shadow Mapping in WebGPU
 
-A single-page WebGPU / WGSL demo comparing real-time shadow techniques in the same procedural scene.
+An interactive WebGPU / WGSL study of real-time soft shadows in a shared procedural scene.
+
+Live portfolio demo:
+
+```text
+https://fatemehshirvani.github.io/assets/soft-shadows/demo.html
+```
 
 The project implements and compares:
 
@@ -13,7 +19,7 @@ The project implements and compares:
 - VSSM Hybrid
 - VSSM Paper
 
-The scene is procedural and does not require external meshes or textures.
+The scene is procedural and does not require external meshes or textures. The work focuses on penumbra behavior, light leaking, contact-shadow artifacts, and the tradeoff between visual stability and speed.
 
 ## Run
 
@@ -43,7 +49,7 @@ http://127.0.0.1:8000/
 
 ## Browser Notes
 
-This project requires WebGPU. It is most reliable in Chrome or Edge on a machine with compatible GPU drivers.
+This project requires WebGPU. It is most reliable in Chrome, Edge, or another WebGPU-enabled browser on a machine with compatible GPU drivers.
 
 If the page says `No appropriate GPUAdapter found`, the browser exposes `navigator.gpu` but refuses to provide an adapter. Use `run_demo.cmd`, update the browser/GPU driver, or check `chrome://gpu` for WebGPU status.
 
