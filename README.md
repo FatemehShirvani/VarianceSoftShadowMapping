@@ -47,6 +47,8 @@ This project requires WebGPU. It is most reliable in Chrome or Edge on a machine
 
 If the page says `No appropriate GPUAdapter found`, the browser exposes `navigator.gpu` but refuses to provide an adapter. Use `run_demo.cmd`, update the browser/GPU driver, or check `chrome://gpu` for WebGPU status.
 
+When no adapter is available, the page falls back to a recorded preview video so the project can still be viewed from a normal browser tab.
+
 The public `index.html` starts in a stable no-shadow baseline mode. Use the UI selectors to switch between the implemented shadow techniques.
 
 ## Report

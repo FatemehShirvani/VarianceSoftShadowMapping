@@ -491,6 +491,17 @@
         </tr>
       </table>
       <pre id="runtimeStatus" style="display:none; margin:1rem auto 0; max-width:1024px; text-align:left; color:#8b0000; background:#fff1f1; border:1px solid #d8a0a0; padding:0.75rem; white-space:pre-wrap;"></pre>
+      <div id="webgpuFallback" class="ui-panel" style="display:none; margin:1rem auto 0; max-width:720px; text-align:left;">
+        <div class="ui-title">WebGPU preview fallback</div>
+        <p class="ui-soft">
+          This browser did not provide a WebGPU adapter, so the live renderer cannot start from this tab.
+          The video below is a recorded preview of the same demo. For the interactive version, run
+          <code>run_demo.cmd</code> from the project folder so Chrome opens with WebGPU flags.
+        </p>
+        <video controls autoplay muted loop playsinline style="width:100%; border:1px solid var(--panel-border); background:#05070a;">
+          <source src="soft-shadow-loop-card.mp4" type="video/mp4">
+        </video>
+      </div>
       </p>
     </div>
     <div style = "text-align:left;">
@@ -6152,6 +6163,14 @@
 
       function reportRuntimeStatus(message, error = null) {
         const status = document.getElementById("runtimeStatus");
+        const fallback = document.getElementById("webgpuFallback");
+        if (fallback && (
+          message.includes("WebGPU") ||
+          message.includes("GPUAdapter") ||
+          message.includes("Initialization failed")
+        )) {
+          fallback.style.display = "block";
+        }
         if (status) {
           const errorText = formatRuntimeError(error);
           const detail = errorText ? `\n${errorText}` : "";
