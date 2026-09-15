@@ -8,6 +8,10 @@ Live demo:
 https://fatemehshirvani.github.io/assets/soft-shadows/demo.html
 ```
 
+## Context
+
+Course project for the Image Synthesis course taught by Tamy Boubekeur at École Polytechnique. Developed in March-April 2026.
+
 ## Implemented Methods
 
 - Hard shadow mapping [1]
