@@ -10,7 +10,7 @@ https://fatemehshirvani.github.io/assets/soft-shadows/demo.html
 
 ## Context
 
-Final course project for CSC_52084_EP, Image Synthesis - X-AN3-P2 2025-26, taught by Tamy Boubekeur at École Polytechnique.
+Final course project for CSC_52084_EP, Image Synthesis - X-AN3-P2 2025-26, taught by [Tamy Boubekeur](https://perso.telecom-paristech.fr/boubek/) at École Polytechnique.
 
 ## Implemented Methods
 
