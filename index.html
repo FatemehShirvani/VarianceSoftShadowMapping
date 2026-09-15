@@ -6831,9 +6831,9 @@
           }
           if (location.protocol === "file:") {
             diagnostics.push("fileMode=true");
-            diagnostics.push("Try open_vssm_file_mode.cmd first, then fall back to run_vssm_demo.cmd");
+            diagnostics.push("Use run_demo.cmd from the project folder to launch Chrome with WebGPU flags.");
           } else {
-            diagnostics.push("Try launching Chrome with a clean profile and WebGPU flags via vssm_workspace/base_code/run_vssm_demo.cmd");
+            diagnostics.push("Chrome did not provide a WebGPU adapter. Use run_demo.cmd, or open Chrome with --enable-unsafe-webgpu --ignore-gpu-blocklist --force-high-performance-gpu.");
           }
           throw new Error(`No appropriate GPUAdapter found. ${diagnostics.join(", ")}`);
         }
