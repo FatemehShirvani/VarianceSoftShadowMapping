@@ -23,6 +23,15 @@ Final course project for CSC_52084_EP, Image Synthesis - X-AN3-P2 2025-26, taugh
 - VSSM Hybrid mode
 - Ray tracing mode retained as a debugging reference
 
+## Repository Layout
+
+- `index.html`: self-contained demo used for static hosting.
+- `src/`: extracted CSS, JavaScript, and WGSL source for review.
+- `tools/extract-source.js`: regenerates the `src/` mirror from `index.html`.
+- `report.pdf`: project write-up.
+- `soft-shadow-loop-card.mp4`: short recorded preview used as a fallback/portfolio asset.
+- `run_demo.cmd`, `launch_webgpu_chrome.cmd`, `open_file_mode.cmd`: Windows helper launchers.
+
 ## Pipeline
 
 The VSSM implementation follows a four-stage WebGPU pipeline:
@@ -98,13 +107,7 @@ These were used to separate variance-related leakage from SAT precision issues a
 
 The demo requires a WebGPU-enabled browser.
 
-On Windows:
-
-```text
-run_demo.cmd
-```
-
-Or serve the folder manually:
+Cross-platform:
 
 ```bash
 python -m http.server 8000
@@ -116,7 +119,17 @@ Then open:
 http://127.0.0.1:8000/
 ```
 
+Windows helper:
+
+```text
+run_demo.cmd
+```
+
 See [report.pdf](report.pdf) for the full write-up.
+
+## License
+
+Code is released under the [MIT License](LICENSE).
 
 ## References
 

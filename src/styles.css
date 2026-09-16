@@ -1,0 +1,97 @@
+    :root {
+      --panel-border: #cfd6df;
+      --panel-bg: #f8fafc;
+      --panel-title: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --success: #15803d;
+      --danger: #b91c1c;
+      --accent: #0f766e;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #0f172a;
+      background: #f5f7fb;
+    }
+
+    input[type="range"] {
+      width: 200px;
+    }
+
+    select,
+    input[type="color"] {
+      border: 1px solid #b8c2cf;
+      border-radius: 6px;
+      background: white;
+      padding: 0.1rem 0.35rem;
+    }
+
+    .ui-panel {
+      border: 1px solid var(--panel-border);
+      background: var(--panel-bg);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    }
+
+    .ui-title {
+      font-weight: 700;
+      color: var(--panel-title);
+    }
+
+    .ui-subtle {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    .ui-soft {
+      color: var(--text-soft);
+      font-size: 0.86rem;
+    }
+
+    .perf-fast {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .perf-slow {
+      color: var(--danger);
+      font-weight: 600;
+    }
+
+    .perf-neutral {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      background: #e2f3f1;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .split-workspace {
+      margin: 0.9rem auto 0;
+      width: 1024px;
+      max-width: 100%;
+    }
+
+    .split-controls-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+      width: 100%;
+    }
+
+    .split-view-panel {
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
